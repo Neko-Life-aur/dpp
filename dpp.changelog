@@ -1,3 +1,20 @@
+# 10.0.28-1 / 2023-12-02
+
+* bump to new library version
+* see library changelog for full list
+
+# 10.0.27-1 / 2023-12-02
+
+* bump to new library version
+* see library changelog for full list
+
+# 10.0.26-1 / 2023-12-02
+
+* bump to new library version
+* new package maintainer: Neko-Life
+* move sodium and opus to optional dependency, needed for voice support
+* see library changelog for full list
+
 # 10.0.25-1 / 2023-09-01
 
 * bump to new library version
