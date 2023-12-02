@@ -1,21 +1,26 @@
-# Maintainer: Jakub 'Eremiell' Marek <eremiell at eremiell dot net>
+# Maintainer: Neko-Life <nekolife123579 at gmail dot com>
+# See also https://github.com/Neko-Life-aur/dpp
+#
+# Contributor: Jakub 'Eremiell' Marek <eremiell at eremiell dot net>
 # See also https://github.com/eremiell-aur/dpp
 pkgname=dpp
 _pkgname=DPP
-pkgver=10.0.25
+pkgver=10.0.26
 pkgrel=1
 pkgdesc="Lightweight and Scalable C++ Discord API Bot Library"
 arch=('x86_64')
 url="https://dpp.dev/"
 _url="https://github.com/brainboxdotcc/${_pkgname}"
 license=('Apache')
-depends=('glibc' 'gcc-libs' 'openssl' 'zlib' 'opus' 'libsodium' 'nlohmann-json')
+depends=('glibc' 'gcc-libs' 'openssl' 'zlib' 'nlohmann-json')
 makedepends=('cmake' 'pkgconf')
+optdepends=('opus: voice support'
+            'libsodium: voice support')
 install="${pkgname}.install"
 changelog="${pkgname}.changelog"
 source=("${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz"
 	"${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz.asc")
-sha256sums=('bd39d24e01748ff4cc34ad7ca0faaa0f53542efd8843d4bcc75566a11f0f248b'
+sha256sums=('038e95c3ef8228957bf2a84d4ff73ca1dd95ecb2cf7478ca57137d5d99f7e709'
             'SKIP')
 validpgpkeys=('EDCEFB1FDAFFAC7952EED46F9927644B850BDD23')
 
