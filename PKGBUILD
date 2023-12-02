@@ -5,7 +5,7 @@
 # See also https://github.com/eremiell-aur/dpp
 pkgname=dpp
 _pkgname=DPP
-pkgver=10.0.26
+pkgver=10.0.27
 pkgrel=1
 pkgdesc="Lightweight and Scalable C++ Discord API Bot Library"
 arch=('x86_64')
@@ -18,10 +18,8 @@ optdepends=('opus: voice support'
             'libsodium: voice support')
 install="${pkgname}.install"
 changelog="${pkgname}.changelog"
-source=("${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz"
-	"${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz.asc")
-sha256sums=('038e95c3ef8228957bf2a84d4ff73ca1dd95ecb2cf7478ca57137d5d99f7e709'
-            'SKIP')
+source=("${_url}/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('525a5c10a5fdd69996f48826ea1c37a3f08ba934c95e4cb9738afd209a2ecdb7')
 validpgpkeys=('EDCEFB1FDAFFAC7952EED46F9927644B850BDD23')
 
 prepare() {
