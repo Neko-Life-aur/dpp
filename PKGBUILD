@@ -5,7 +5,7 @@
 # See also https://github.com/eremiell-aur/dpp
 pkgname=dpp
 _pkgname=DPP
-pkgver=10.0.31
+pkgver=10.0.32
 pkgrel=1
 pkgdesc="Lightweight and Scalable C++ Discord API Bot Library"
 arch=('x86_64')
@@ -14,19 +14,19 @@ _url="https://github.com/brainboxdotcc/${_pkgname}"
 license=('Apache')
 depends=('glibc' 'gcc-libs' 'openssl' 'zlib' 'nlohmann-json')
 makedepends=('cmake' 'pkgconf')
-optdepends=('opus: voice support'
-            'libsodium: voice support')
+optdepends=('opus: voice support')
 install="${pkgname}.install"
 changelog="${pkgname}.changelog"
 source=("${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz"
 	"${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz.asc")
-sha256sums=('3e392868c0dc3d0f13a00cfa190a925a20bde62bea58fd87d4acf14de11062bf'
+sha256sums=('b366c0eb05539208e8d6c81f59de87b2aa6158250968d1bd6360676d576851e7'
             'SKIP')
 validpgpkeys=('EDCEFB1FDAFFAC7952EED46F9927644B850BDD23')
 
 prepare() {
 	cd "${srcdir}/${_pkgname}-${pkgver}"
 	rm -rf "include/dpp/nlohmann"
+	sed -i 's/<dpp\/nlohmann\/json.hpp>/<nlohmann\/json.hpp>/' include/dpp/json.h # temporary fix for bugged cmake
 }
 
 build() {

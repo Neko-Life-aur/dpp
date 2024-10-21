@@ -1,6 +1,6 @@
 pkgbase = dpp
 	pkgdesc = Lightweight and Scalable C++ Discord API Bot Library
-	pkgver = 10.0.31
+	pkgver = 10.0.32
 	pkgrel = 1
 	url = https://dpp.dev/
 	install = dpp.install
@@ -15,11 +15,10 @@ pkgbase = dpp
 	depends = zlib
 	depends = nlohmann-json
 	optdepends = opus: voice support
-	optdepends = libsodium: voice support
-	source = https://github.com/brainboxdotcc/DPP/releases/download/v10.0.31/DPP-10.0.31.tar.gz
-	source = https://github.com/brainboxdotcc/DPP/releases/download/v10.0.31/DPP-10.0.31.tar.gz.asc
+	source = https://github.com/brainboxdotcc/DPP/releases/download/v10.0.32/DPP-10.0.32.tar.gz
+	source = https://github.com/brainboxdotcc/DPP/releases/download/v10.0.32/DPP-10.0.32.tar.gz.asc
 	validpgpkeys = EDCEFB1FDAFFAC7952EED46F9927644B850BDD23
-	sha256sums = 3e392868c0dc3d0f13a00cfa190a925a20bde62bea58fd87d4acf14de11062bf
+	sha256sums = b366c0eb05539208e8d6c81f59de87b2aa6158250968d1bd6360676d576851e7
 	sha256sums = SKIP
 
 pkgname = dpp
