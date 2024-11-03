@@ -5,7 +5,7 @@
 # See also https://github.com/eremiell-aur/dpp
 pkgname=dpp
 _pkgname=DPP
-pkgver=10.0.33
+pkgver=10.0.34
 pkgrel=1
 pkgdesc="Lightweight and Scalable C++ Discord API Bot Library"
 arch=('x86_64')
@@ -15,11 +15,10 @@ license=('Apache')
 depends=('glibc' 'gcc-libs' 'openssl' 'zlib' 'nlohmann-json')
 makedepends=('cmake' 'pkgconf')
 optdepends=('opus: voice support')
-install="${pkgname}.install"
 changelog="${pkgname}.changelog"
 source=("${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz"
 	"${_url}/releases/download/v${pkgver}/${_pkgname}-${pkgver}.tar.gz.asc")
-sha256sums=('75ee7b32c9d46bde6d02b46b3a907302865a4ee4a965ef8a575b7417bb0a46fe'
+sha256sums=('58eee75e81ac305db0b71a8cd4b821ff3cabcdfa0575e56ba5e4ce543531bd2f'
             'SKIP')
 validpgpkeys=('EDCEFB1FDAFFAC7952EED46F9927644B850BDD23')
 
@@ -40,5 +39,4 @@ build() {
 package() {
 	cd "${srcdir}/${_pkgname}-${pkgver}/build"
 	make DESTDIR="${pkgdir}/" install
-	ln -s "/usr/include/nlohmann" "${pkgdir}/usr/include/dpp/nlohmann"
 }
